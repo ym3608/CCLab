@@ -1,8 +1,6 @@
-<<<<<<< Updated upstream
-=======
+
 // consulted chatGPT for help on the right definition format of variables such as "universeAppeared", "HitCount", "brokenLayers", "drawOneSmallFish" etc. 
 
->>>>>>> Stashed changes
 let scene = 1;
 // fish tank
 let x, y;
@@ -111,10 +109,7 @@ function draw() {
     if (scene == 1) {
         if (brokenLayers < 3) {
             // fish tank background
-<<<<<<< Updated upstream
-=======
             // Inspired by the examples from CCLab slides
->>>>>>> Stashed changes
             let gridSizeX = 800;
             let gridSizeY = 25;
 
@@ -246,19 +241,13 @@ function drawCreature(x, y, size) {
     if (scene == 1) {
         if (mouseIsPressed && brokenLayers < 3) {
             if (mouseX < 100 || mouseX > 700 || mouseY < 80 || mouseY > 430) {
-<<<<<<< Updated upstream
-=======
                 // consulted chatGPT for the syntax of the true/false definition of the variable "touchingWall"
->>>>>>> Stashed changes
                 if (touchingWall == false) {
                     hitCount = hitCount + 1;
                     touchingWall = true;
 
                     // Every two hits break one layer
-<<<<<<< Updated upstream
-=======
                     // Got the inspiration from TA Li
->>>>>>> Stashed changes
                     if (hitCount % 2 == 0) {
                         brokenLayers = brokenLayers + 1;
                     }
@@ -283,11 +272,8 @@ function drawBody(x, y, size) {
     push();
     translate(x, y);
 
-<<<<<<< Updated upstream
-=======
     // Got the instruction of Professor Moon to set different colors of fishy in scene 2, 3 and 4
 
->>>>>>> Stashed changes
     fill(goldfishR, goldfishG, goldfishB);
     if (scene == 1) {
         noStroke();
@@ -423,10 +409,7 @@ function drawBackground2() {
     noStroke();
     textSize(12);
     textAlign(CENTER);
-<<<<<<< Updated upstream
-=======
     // text align is consulted from chatGPT
->>>>>>> Stashed changes
     text("You did it! Now you enter the pond.", 640, 35);
     text("There are a lot of fish friends, but they seem trapped...", 640, 60);
     text("How can you pass the gap and reach the ocean?", 640, 85);
@@ -549,10 +532,7 @@ function drawPondGoldfish() {
 
 function mousePressed() {
     if (scene == 2 && goldfishSize > 0.25) {
-<<<<<<< Updated upstream
-=======
         // distance function syntax consulted from chatGPT
->>>>>>> Stashed changes
         if (dist(mouseX, mouseY, goldfishX, goldfishY) < 100 * goldfishSize) {
             goldfishSize = goldfishSize * 0.5;
         }
@@ -591,10 +571,7 @@ function drawBackground3() {
     );
 
     // Start timer
-<<<<<<< Updated upstream
-=======
     // consulted chatGPT for the true/false syntax of the timer
->>>>>>> Stashed changes
     if (scene3Started == false) {
         scene3StartFrame = frameCount;
         scene3Started = true;
@@ -630,10 +607,7 @@ function drawBackground3() {
     ellipse(hookX + 17, hookY + 95, 15, 15);
 
     // Check collision with the actual bait position
-<<<<<<< Updated upstream
-=======
     // consulted chatGPT for the true/false syntax of the variable "fishHit"
->>>>>>> Stashed changes
     if (fishHit == false) {
         if (dist(oceanFishX, oceanFishY, hookX + 17, hookY + 95) < 40) {
             fishHit = true;
@@ -643,10 +617,7 @@ function drawBackground3() {
 
     // Control fish only when not hit
     if (fishHit == false) {
-<<<<<<< Updated upstream
-=======
         // consulted chatGPT for the definition format of arrow keys
->>>>>>> Stashed changes
         if (keyIsDown(LEFT_ARROW)) {
             oceanFishX = oceanFishX - oceanFishSpeed;
         }
@@ -697,10 +668,7 @@ function drawBackground3() {
     }
 
     // Show universe after fifteen seconds
-<<<<<<< Updated upstream
-=======
     // consulted cahtGPT for the alighned interval of 15 seconds in frameCount
->>>>>>> Stashed changes
     if (frameCount - scene3StartFrame >= 600) {
         universeAppeared = true;
     }
@@ -766,10 +734,7 @@ function drawBackground4() {
     text("to break real-life obstacles!", width / 2, 140);
     text("Feeling happy? There's a little surprise waiting for you!", 400, 460);
 
-<<<<<<< Updated upstream
-=======
     // shootingstar scene is inspired by graphbook 3.1 Types of Motion (1), Math Functions
->>>>>>> Stashed changes
     shootingstarX = shootingstarX + xSpeed;
     shootingstarY = shootingstarY + ySpeed;
 

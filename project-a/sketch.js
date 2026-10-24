@@ -1,6 +1,4 @@
-
-// consulted chatGPT for help on the right definition format of variables such as "universeAppeared", "HitCount", "brokenLayers", "drawOneSmallFish" etc. 
-
+// consulted chatGPT for help on the right definition format of variables such as "universeAppeared", "HitCount", "brokenLayers", "drawOneSmallFish" etc.
 let scene = 1;
 // fish tank
 let x, y;
@@ -23,7 +21,6 @@ let goldfishB = 0;
 let goldfishFinR = 255;
 let goldfishFinG = 140;
 let goldfishFinB = 20;
-
 
 // small fish
 let fishSize = 1;
@@ -92,11 +89,9 @@ function setup() {
     shootingstarY = 200;
     shootingstarxSpeed = random(-5, 5);
     shootingstarySpeed = random(-5, 5);
-
 }
 
 function draw() {
-
     if (scene == 4) {
         goldfishFinR = map(sin(frameCount), -1, 1, 0, 255);
         goldfishFinG = map(sin(frameCount), -1, 1, 255, 0);
@@ -258,12 +253,10 @@ function drawCreature(x, y, size) {
         }
     }
 
-
     drawTail(65, -6, 1);
     drawFin(-10, -49, 30);
     drawBody(0, 0, 100);
     drawEye(-40, -10, 10);
-
 
     // four parts, all using transformation function
     pop();
@@ -279,7 +272,6 @@ function drawBody(x, y, size) {
         noStroke();
         fill(goldfishR, goldfishG, goldfishB);
     }
-
 
     if (scene == 3 || scene == 4) {
         noStroke();
@@ -320,7 +312,6 @@ function drawTail(x, y, size) {
         stroke(goldfishR, goldfishG, goldfishB);
         fill(goldfishR, goldfishG, goldfishB);
     }
-
 
     if (scene == 2 || scene == 3 || scene == 4) {
         strokeWeight(10);
@@ -363,7 +354,6 @@ function drawFin(x, y, size) {
         stroke(goldfishR, goldfishG, goldfishB);
         fill(goldfishR, goldfishG, goldfishB);
     }
-
 
     if (scene == 2 || scene == 3 || scene == 4) {
         strokeWeight(10);
@@ -524,8 +514,6 @@ function drawPondGoldfish() {
     drawTail(65, -6, 1);
     drawBody(0, 0, 100);
     drawEye(-40, -10, 10);
-
-
 
     pop();
 }

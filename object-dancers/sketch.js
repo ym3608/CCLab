@@ -44,9 +44,6 @@ class MyungmyungDancer {
       this.speed = -this.speed;
     }
   }
-  mousePressed() {
-    MyungmyungDancer.speak("Meong Jae Hyon!");
-  }
   update() {
     this.bounce();
   }
